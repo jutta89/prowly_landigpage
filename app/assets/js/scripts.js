@@ -91,9 +91,3 @@ document.addEventListener('DOMContentLoaded', function () {
 		inputPerson.value = inputPerson.defaultValue;
 	});
 }, false);
-
-// UWAGI
-
-// 1. Rozne odleglosci miedzy itemami (osobami) w dropdownie
-// 2. Na buttonie rózne odstępy linii od buttona
-// 3. Za 'Try now' dodałabym '!'
