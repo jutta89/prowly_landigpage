@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		if (filteredArray.length > 0) {
 			listPerson.classList.remove('is-hidden');
-			// inputPerson.classList.add('is-focused'); // wariant bez listy na poczatku
+			inputPerson.classList.add('is-focused');
 		} else {
 			listPerson.classList.add('is-hidden');
 			inputPerson.classList.remove('is-focused');
