@@ -1,0 +1,149 @@
+.input {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: 58px;
+    margin: 0 auto;
+    padding: 10px 15px 10px 50px;
+    border: 1px solid $c-gray-light; 
+    border-radius: 6px;
+    background: $c-light;
+    color: $c-black;
+    font-weight: $fw-normal;
+    font-size: $fz-normal;
+    transition: border-color .2s ease;
+    &--search {
+        position: relative;
+        + label {
+            position: absolute;
+            top: calc(50% - 11px);
+            left: 16px;
+            color: $c-gray;
+            font-size: 22px;
+        }
+    }
+    &:hover, &:focus {
+        border-color: $c-accent;
+    }
+    &.is-focused {
+        box-shadow: none;
+        border-radius: 6px 6px 0 0;
+        border-bottom-color: $c-light;
+    }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $c-gray;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: $c-gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: $c-gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: $c-gray;
+}
+
+
+//----------------------------------*\
+// SEARCH INPUT
+//----------------------------------*/
+
+.input-hld {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin: 75px auto 0;
+    position: relative;
+}
+
+.search-person__dropdown {
+    position: absolute;
+    top: calc(100% - 1px);
+    width: 100%;
+    z-index: 11;
+    max-width: 320px;
+    pointer-events: auto;
+    padding: 22px 0 32px;
+    border: 1px solid $c-accent; 
+    border-top: 0;
+    border-radius: 0 0 6px 6px;
+    background: $c-light;
+    color: $c-gray;
+    font-size: $fz-normal;
+    &.is-hidden {
+        padding: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+.search-person-item {
+    position: relative;
+    display: flex;
+    padding: 0 15px;
+    cursor: pointer;
+    &:not(:last-child) {
+        margin-bottom: 15px; 
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        right: 0;
+        bottom: -7px;
+        left: 0;
+        background: rgba($c-black, .05);
+        opacity: 0;
+        transition: opacity .2s ease;
+    }
+    &:hover, &:focus {
+        &:before {
+            opacity: 1;
+        }
+    }
+}
+
+.search-person__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 6px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.search-person__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 12px;
+}
+
+.search-person__name {
+    color: $c-black;
+    font-weight: $fw-medium;
+}
+
+.search-person__position {
+    font-size: 14px;
+}
+
+.input-shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    pointer-events: none;
+    box-shadow: $box-shadow; 
+}
+
+//----------------------------------*/

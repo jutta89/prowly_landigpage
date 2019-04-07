@@ -1,0 +1,56 @@
+.site-btn {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    height: 63px;
+    cursor: pointer;
+    z-index: 10;
+    padding-right: 20px;
+    padding-left: 20px;
+    border: 1px solid $c-accent;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: $fw-medium;
+    line-height: 100%;
+    transition: box-shadow .2s ease, opacity .2s ease;
+    &--accent {
+        background: $c-accent;
+        color: $c-light;
+    }
+    &--lines {
+        &:before,
+        &:after {
+            position: absolute;
+            font-size: 70px;
+            font-family: 'icomoon' !important;
+            color: $c-black;
+            opacity: 0;
+            z-index: -1;
+            visibility: hidden;
+            transition: transform .3s ease, opacity .2s ease, visibility .1s ease;
+        }
+        &:before {
+            @extend .icon-left:before;
+            left: -52px;
+            transform: translateX(5px);
+        }
+        &:after {
+            @extend .icon-right:before;
+            right: -55px;
+            transform: translateX(-5px);
+        }
+    }
+    &:hover, &:focus {
+        box-shadow: -1px 1px 5px 2px rgba($c-black, 0.1);
+        opacity: 0.95;
+        &:before, &:after {
+            opacity: 1;
+            transform: translateX(0);
+            visibility: visible;
+        }
+    }
+}
+
+.site-btn-hld {
+    margin: 37px auto;
+}

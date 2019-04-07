@@ -1,0 +1,17 @@
+.wrapper {
+    width: 100%;
+    max-width: 740px;
+    &--big {
+        max-width: 1200px;
+    }
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &--second {
+        margin: 150px 0 0;
+    }
+}
